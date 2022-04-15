@@ -28,5 +28,10 @@ pub mod linux;
 #[cfg(target_os="linux")]
 pub use crate::linux::*;
 
+#[cfg(target_os="macos")]
+pub mod macos;
+#[cfg(target_os="macos")]
+pub use crate::macos::*;
+
 pub mod common;
 pub use crate::common::*;
