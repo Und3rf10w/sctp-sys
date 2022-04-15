@@ -10,6 +10,11 @@ fn main() {
 	println!("cargo:rustc-flags=-l sctp");
 }
 
+#[cfg(target_os = "darwin")]
+fn main() {
+	println!("cargo:rustc-flags=-l sctp");
+}
+
 #[cfg(target_os = "windows")]
 fn main() {
 	println!("cargo:rustc-flags=-l sctpsp");
